@@ -11,6 +11,6 @@ public class NotepadController {
     private final NotepadService notepadService;
     @GetMapping
     public String getNotepad() {
-        return notepadService.getNotepad(1L);
+        return notepadService.getNotepadOrElse(1L);
     }
 }

@@ -16,6 +16,6 @@ public class DummyNotepadRepository implements NotepadRepository {
         if (Objects.isNull(id)) {
             throw new IllegalArgumentException("should not be called");
         }
-        return Optional.of(new Notepad());
+        return Optional.of(new Notepad(id, "notepad"));
     }
 }

@@ -14,7 +14,7 @@ public class NotepadService {
                 .orElse(notepadRepository.findById(null).get()).getContent();
     }
 
-    public String  getNotepadOrElseGet(Long id) {
+    public String getNotepadOrElseGet(Long id) {
         return notepadRepository.findById(id)
                 .orElseGet(() -> notepadRepository.findById(null).get()).getContent();
     }
